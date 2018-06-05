@@ -15,7 +15,8 @@ const lian = resolve => require(['../pages/lian.vue'], resolve);
 const me = resolve => require(['../pages/me.vue'], resolve);
 const wenshu = resolve => require(['../pages/wenshu-search.vue'], resolve);
 const contact = resolve => require(['../pages/contact.vue'], resolve);
-const page3 = resolve => require(['../pages/page3.vue'], resolve);
+const register = resolve => require(['../pages/register.vue'], resolve);
+const login = resolve => require(['../pages/login.vue'], resolve);
 export default {
     mode: 'hash',
     base: __dirname,
@@ -36,6 +37,7 @@ export default {
             {path: "/me", name: "me", component: me,meta:{title:"我的"}},
             {path: "/wenshu", name: "wenshu", component: wenshu,meta:{title:"文书送达"}},
             {path: "/contact", name: "contact", component: contact,meta:{title:"（2018）川1129民访9号"}},
-            {path: "/page3", name: "page3", component: page3,meta:{title:"发现"}},
+            {path: "/register", name: "register", component: register,meta:{title:"当事人注册"}},
+            {path: "/login", name: "login", component: login,meta:{title:"当事人登陆"}},
         ]}
     ]}

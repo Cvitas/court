@@ -20,10 +20,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="input-kuang">
-                    <input type="text" placeholder="输入回复内容"/>
-                    <p class="contact-send">发送</p>
-                </div>
+            </div>
+            <div class="input-kuang">
+                <input type="text" placeholder="输入回复内容"/>
+                <p class="contact-send">发送</p>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
                     interactiveScrollbars:false,
                     preventDefault:false
                 });
-            },100)
+            },2000)
         },
         methods:{
         },

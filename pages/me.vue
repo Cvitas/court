@@ -59,7 +59,7 @@
                     interactiveScrollbars:false,
                     preventDefault:false
                 });
-            },200)
+            },2000)
         },
         methods:{
             goRouter(type){

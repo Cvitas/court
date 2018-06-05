@@ -626,6 +626,7 @@
       .contact-scroll{
         background: #FFFFFF;
         margin: 0 10px;
+        bottom: 110px;
         .contact-tips{
           text-align: center;
           font-size: 0.6rem;
@@ -661,30 +662,96 @@
             font-size: 0.8rem;
           }
         }
-        .input-kuang{
-          text-align: center;
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          padding: 20px 0 10px 0;
-          >input{
-            width: 100%;
-            height: 40px;
-            border-bottom: @border;
-            text-indent: 10px;
-          }
-          .contact-send{
-            width: 60px;
-            height: 40px;
-            line-height: 40px;
-            margin-top: 10px;
-            border-radius: 8px;
-            color: #FFFFFF;
-            background-color: @color;
-            float: right;
-            &:active{
-              background-color: @active-color;
+      }
+      .register-scroll{
+        background: #EEEEEE;
+        .register-form{
+          .register-form-item{
+            margin-bottom: 5px;
+            .item-name{
+              line-height: 30px;
+              height: 30px;
+              text-indent: 5%;
+              font-size: 0.6rem;
             }
+            .item-input{
+              line-height: 30px;
+              height: 30px;
+              text-align: center;
+              &.submit-input{
+                height: 50px;
+              }
+              >input{
+                width: 90%;
+                height: 100%;
+                box-sizing: border-box;
+                border:@border;
+                text-indent: 10px;
+                border-radius: 8px;
+              }
+              .register-btn{
+                display: block;
+                width: 90%;
+                background: @color;
+                color: #FFFFFF;
+                font-size: 0.8rem;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 6px;
+                margin: 20px auto 0;
+                &:active{
+                  background: @active-color;
+                }
+              }
+            }
+          }
+        }
+      }
+      .login-scroll{
+        .login-form{
+          margin: 200px auto 0;
+          text-align: center;
+          width: 90%;
+          background: #FFFFFF;
+          border: @border;
+          box-shadow: @boxShadow2;
+          border-radius: 4px;
+          .login-form-item{
+            border-bottom: @border;
+            position: relative;
+            >select{
+              width: 100%;
+              height: 40px;
+              background: #FFFFFF;
+              text-indent: 10px;
+            }
+            >input{
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              text-indent: 30px;
+            }
+            .input-icon{
+              position: absolute;
+              left: 3px;
+              bottom: 0;
+              line-height: 50px;
+            }
+          }
+        }
+        .login-btn{
+          margin: 20px auto 0;
+          width: 85%;
+          background: @color;
+          color: #FFFFFF;
+          font-size: 0.8rem;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 6px;
+          text-align: center;
+          margin: 20px auto 0;
+          &:active{
+            background: @active-color;
           }
         }
       }
@@ -803,6 +870,47 @@
   .contact-wrap{
     .box{
       background: #EEEEEE;
+      .input-kuang{
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        background: #FFFFFF;
+        >input{
+          width: 100%;
+          height: 40px;
+          border-bottom: @border;
+          text-indent: 10px;
+        }
+        .contact-send{
+          width: 60px;
+          height: 40px;
+          line-height: 40px;
+          margin-top: 10px;
+          border-radius: 8px;
+          color: #FFFFFF;
+          background-color: @color;
+          float: right;
+          &:active{
+            background-color: @active-color;
+          }
+        }
+      }
+    }
+  }
+  .register-wrap{
+    bottom: 0;
+    z-index: 99;
+  }
+  .login-wrap{
+    bottom: 0;
+    z-index: 99;
+    .box{
+      background: url("../imgs/login_bg.png") no-repeat;
+      background-size: 100% 100%;
     }
   }
 }

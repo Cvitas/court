@@ -104,7 +104,7 @@
                     interactiveScrollbars:false,
                     preventDefault:false
                 });
-            },100)
+            },2000)
         },
         methods:{
         },

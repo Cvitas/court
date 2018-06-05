@@ -80,7 +80,7 @@
                         <div class="content-list list-life">
                             <P class="content-title">网上服务</P>
                             <div class="content-item half no-left" @click="goRouter(8)">
-                                <span class="item-2" style="padding-top: 30px;">杭州互联网法院</span>
+                                <span class="item-2" style="padding-top: 30px;">互联网法院</span>
                                 <i class="icon-jianyu item-icon item-half" style="color:#0087D0;"></i>
                             </div>
                             <div class="content-item half no-right" @click="goRouter(9)">
@@ -223,6 +223,7 @@
                         this.$router.push("baoguang");
                         break;
                     case 3:
+                        window.location.href = "http://mauction.jd.com/courtProductList.html?vendorId=641891&page=1&sTop=0";
                         break;
                     case 4:
                         this.$router.push("jianxing");
@@ -264,12 +265,15 @@
                     case 18:
                         break;
                     case 19:
+                        this.$router.push("register");
                         break;
                     case 20:
                         break;
                     case 21:
+                        window.location.href="tel://12368";
                         break;
                     case 22:
+                        this.$router.push("contact");
                         break;
                     case 23:
                         break;
