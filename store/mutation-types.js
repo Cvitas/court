@@ -1,0 +1,1 @@
+export const SLIDE_METHOD = 'SLIDE_METHOD'
