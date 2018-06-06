@@ -80,7 +80,7 @@
                         <div class="content-list list-life">
                             <P class="content-title">网上服务</P>
                             <div class="content-item half no-left" @click="goRouter(8)">
-                                <span class="item-2" style="padding-top: 30px;">互联网法院</span>
+                                <span class="item-2" style="padding-top: 30px;">苍溪互联网法院</span>
                                 <i class="icon-jianyu item-icon item-half" style="color:#0087D0;"></i>
                             </div>
                             <div class="content-item half no-right" @click="goRouter(9)">
@@ -246,28 +246,32 @@
                     case 11:
                         break;
                     case 12:
-                        this.$router.push("newsList");
+                        this.$router.push("zhiyin");
                         break;
                     case 13:
-                        this.$router.push("newsList");
+                        this.$router.push("muban");
                         break;
                     case 14:
-                        this.$router.push("newsList");
+                        this.$router.push("jisuan");
                         break;
                     case 15:
+                        window.location.href = "http://www.pkulaw.com";
                         this.$router.push("newsList");
                         break;
                     case 16:
-                        this.$router.push("newsList");
+                        this.$router.push("sifa");
                         break;
                     case 17:
+                        this.$router.push("yuyue");
                         break;
                     case 18:
+                        this.$router.push("xinyong");
                         break;
                     case 19:
                         this.$router.push("register");
                         break;
                     case 20:
+                        this.$router.push("wenda");
                         break;
                     case 21:
                         window.location.href="tel://12368";
@@ -276,6 +280,7 @@
                         this.$router.push("contact");
                         break;
                     case 23:
+                        this.$router.push("map");
                         break;
                 }
             }

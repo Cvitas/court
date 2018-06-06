@@ -17,6 +17,15 @@ const wenshu = resolve => require(['../pages/wenshu-search.vue'], resolve);
 const contact = resolve => require(['../pages/contact.vue'], resolve);
 const register = resolve => require(['../pages/register.vue'], resolve);
 const login = resolve => require(['../pages/login.vue'], resolve);
+const message = resolve => require(['../pages/message.vue'], resolve);
+const jisuan = resolve => require(['../pages/jisuan.vue'], resolve);
+const muban = resolve => require(['../pages/muban.vue'], resolve);
+const zhiyin = resolve => require(['../pages/zhiyin.vue'], resolve);
+const sifa = resolve => require(['../pages/sifa.vue'], resolve);
+const wenda = resolve => require(['../pages/wenda.vue'], resolve);
+const yuyue = resolve => require(['../pages/yuyue.vue'], resolve);
+const xinyong = resolve => require(['../pages/xinyong.vue'], resolve);
+const map = resolve => require(['../pages/map.vue'], resolve);
 export default {
     mode: 'hash',
     base: __dirname,
@@ -39,5 +48,14 @@ export default {
             {path: "/contact", name: "contact", component: contact,meta:{title:"（2018）川1129民访9号"}},
             {path: "/register", name: "register", component: register,meta:{title:"当事人注册"}},
             {path: "/login", name: "login", component: login,meta:{title:"当事人登陆"}},
+            {path: "/message", name: "message", component: message,meta:{title:"消息"}},
+            {path: "/jisuan", name: "jisuan", component: jisuan,meta:{title:"计算工具"}},
+            {path: "/muban", name: "muban", component: muban,meta:{title:"文书模板"}},
+            {path: "/zhiyin", name: "zhiyin", component: zhiyin,meta:{title:"诉讼指引"}},
+            {path: "/sifa", name: "sifa", component: sifa,meta:{title:"司法文件"}},
+            {path: "/wenda", name: "wenda", component: wenda,meta:{title:"智能问答"}},
+            {path: "/yuyue", name: "yuyue", component: yuyue,meta:{title:"网上预约"}},
+            {path: "/xinyong", name: "xinyong", component: xinyong,meta:{title:"信用查询"}},
+            {path: "/map", name: "map", component: map,meta:{title:"法治地图"}},
         ]}
     ]}

@@ -23,7 +23,7 @@
                 currentNav:"/",
                 menus:[{name:"首页",link:"/",icon:"icon-home",active:1},
                     {name:"新闻",link:"newsList",icon:"icon-xinwen"},
-                    {name:"消息",link:"contact",icon:"icon-faxian"},
+                    {name:"消息",link:"message",icon:"icon-faxian"},
                     {name:"我的",link:"login",icon:"icon-user"},
                 ]
             }

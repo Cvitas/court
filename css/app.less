@@ -150,6 +150,26 @@
       width: 100%;
       height: 100%;
       background: #FFFFFF;
+      .line-items{
+        .line-item{
+          background: #FFFFFF;
+          font-size: 0.8rem;
+          position: relative;
+          border-bottom: @border;
+          height: 40px;
+          line-height: 40px;
+          .icon-right{
+            float: right;
+            line-height:40px;
+            height: 40px;
+            font-size: 2rem;
+            margin-right: 5px;
+          }
+          .line-title{
+            padding-left: 15px;
+          }
+        }
+      }
       .search-box{
         padding: 5px 10px;
         color: #666666;
@@ -383,7 +403,20 @@
               float: right;
             }
           }
-
+        }
+        .line-items{
+          .line-item{
+            line-height: initial;
+            height: initial;
+            min-height: 50px;
+          }
+          .line-title{
+            float: left;
+            width: 80%;
+            margin-left: 5px;
+            padding-top: 10px;
+            font-size: 0.6rem;
+          }
         }
       }
       .weituo-list{
@@ -755,6 +788,43 @@
           }
         }
       }
+      .message-scroll{
+        .message-items{
+          margin-top: 10px;
+          .message-item{
+            margin: 0 10px;
+            background: #FFFFFF;
+            font-size: 0.6rem;
+            position: relative;
+            border-bottom: @border;
+            .no-read{
+              position: absolute;
+              left: 10px;
+              width: 10px;
+              height: 10px;
+              border-radius: 5px;
+              background: #0bb20c;
+              top: 50%;
+              margin-top: -5px;
+            }
+            .item-email{
+              padding-left: 30px;
+              line-height: 30px;
+              font-size: 0.9rem;
+            }
+            .item-content{
+              padding-left: 30px;
+              line-height: 30px;
+              font-size: 0.7rem;
+            }
+            .item-time{
+              position: absolute;
+              right: 10px;
+              top: 5px;
+            }
+          }
+        }
+      }
     }
   }
   .panjue-wrap{
@@ -912,6 +982,17 @@
       background: url("../imgs/login_bg.png") no-repeat;
       background-size: 100% 100%;
     }
+  }
+  .message-wrap{
+    bottom: 0;
+    z-index: 99;
+    .box{
+      background: #EEEEEE;
+    }
+  }
+  .jisuan-wrap{
+    bottom: 0;
+    z-index: 99;
   }
 }
 .fade-enter-active, .fade-leave-active {
