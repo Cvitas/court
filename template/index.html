@@ -8,9 +8,6 @@
     <meta name="full-screen" content="yes">
     <meta charset="UTF-8">
     <title>四川苍溪法院</title>
-    <% for (var i in htmlWebpackPlugin.options.files.css) { %>
-    <link href="<%= htmlWebpackPlugin.options.files.css[i]+'?'+webpack.hash %>" rel="stylesheet">
-    <% } %>
 </head>
 <body>
     <div id="app" class="container">
@@ -18,5 +15,6 @@
             <router-view class="view"></router-view>
         </transition>
     </div>
+    <script src="./dll/libs.js"></script>
 </body>
 </html>

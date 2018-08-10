@@ -3,6 +3,7 @@ const ROOT_PATH = path.resolve(__dirname);
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
     entry: {
         app: ["./main.js"]
@@ -12,13 +13,15 @@ module.exports = {
         filename: "[name].bundle.js",
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            Vue: 'vue',
-            '_': 'lodash',
-            'utils': 'utils',
-            type: 'type'
+        new webpack.DllReferencePlugin({
+            context: path.resolve(__dirname, "dll"),
+            manifest: require('./dll/libs-manifest.json'),
+            name:'libs'//引入dll文件的变量名
         }),
         new CleanWebpackPlugin(['build']),
+        new webpack.ProvidePlugin({
+            type:'type'
+        }),
         new HtmlWebpackPlugin({
             title: 'Development',
             template: './template/index.html',
@@ -27,7 +30,8 @@ module.exports = {
             inject: true,
             chunks: ["app"],
             files: {
-                css: []
+                css: [],
+                js:["./dll/libs.js"]
             }
         })
     ],
@@ -49,18 +53,13 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue'], //后缀名自动补全
         alias: {
-            vue: 'vue/dist/vue.js',
             router: ROOT_PATH + '/router/router',
             store: ROOT_PATH + '/store/store',
-            xmUI: ROOT_PATH + '/xmUI/src/index',
             utils: ROOT_PATH + '/js/public/utils',
-            type: ROOT_PATH + '/store/mutation-types',
-            lodash: ROOT_PATH + '/js/public/lodash.min',
-            iScroll: ROOT_PATH + "/js/public/iscroll",
-            swiper: ROOT_PATH + "/js/public/swiper",
+            type: ROOT_PATH + '/store/mutation-types'
         }
     },
-    devServer: {
+    /*devServer: {
         contentBase: path.join(__dirname, "build"),
         host: "192.168.199.185",
         compress: true,
@@ -69,6 +68,6 @@ module.exports = {
             context: ["/rms"],
             target: "http://192.168.199.185:8080",
         }],
-    },
+    },*/
     devtool: 'inline-source-map'
 };

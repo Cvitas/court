@@ -7,14 +7,13 @@
 require("./css/reset.less");
 require("./css/icomoon/style.css");
 require("./css/app.less");
-import './xmUI/src/index.less'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import ROUTER from 'router'
 import store from 'store'
-import xmUI from 'xmUI'
+import xmUI from 'xiaomi-ui'
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(Vuex);

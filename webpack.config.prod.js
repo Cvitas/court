@@ -10,19 +10,20 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "[hash].bundle.js",
+        filename: "[name].bundle.js",
         publicPath: 'build/',
     },
     plugins: [
-        new CleanWebpackPlugin(['build']),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('./dll/libs-manifest.json'),
+        }),
         new ExtractTextPlugin({
             filename:"style.css",
             disable: false,
             allChunks: true
         }),
         new webpack.ProvidePlugin({
-            Vue: 'vue',
-            '_': 'lodash',
             'utils': 'utils',
             type: 'type',
         }),
@@ -31,22 +32,18 @@ module.exports = {
             template: './template/index.html',
             filename: '../index.html',
             hash: true,
-            inject:true,
-            files:{
-                css:[]
-            }
-        })
+            inject:true
+        }),
+        new CleanWebpackPlugin(['build'])
     ],
     resolve: {
         extensions: ['.js', '.vue'], //后缀名自动补全
         alias: {
-            vue: 'vue/dist/vue.js',
+            'vue$': 'vue/dist/vue.esm.js',
             router: ROOT_PATH + '/router/router',
             store: ROOT_PATH + '/store/store',
-            xmUI: ROOT_PATH + '/xmUI/src/index',
             utils: ROOT_PATH + '/js/public/utils',
             type: ROOT_PATH + '/store/mutation-types',
-            lodash: ROOT_PATH + '/js/public/lodash.min',
             iScroll: ROOT_PATH + "/js/public/iscroll",
             swiper: ROOT_PATH + "/js/public/swiper",
         }

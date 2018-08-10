@@ -3,29 +3,29 @@
  * Include
  * description
  */
-const Parent = resolve => require(['../pages/app.vue'], resolve);//首页面
-const panjue_list = resolve => require(['../pages/panjue-list.vue'], resolve);
-const anjian_search = resolve => require(['../pages/anjian-search.vue'], resolve);
-const tingshen = resolve => require(['../pages/tingshen.vue'], resolve);
-const newsList = resolve => require(['../pages/newsList.vue'], resolve);
-const baoguang = resolve => require(['../pages/baoguang.vue'], resolve);
-const weituo = resolve => require(['../pages/weituo.vue'], resolve);
-const jianxing = resolve => require(['../pages/jianxing.vue'], resolve);
-const lian = resolve => require(['../pages/lian.vue'], resolve);
-const me = resolve => require(['../pages/me.vue'], resolve);
-const wenshu = resolve => require(['../pages/wenshu-search.vue'], resolve);
-const contact = resolve => require(['../pages/contact.vue'], resolve);
-const register = resolve => require(['../pages/register.vue'], resolve);
-const login = resolve => require(['../pages/login.vue'], resolve);
-const message = resolve => require(['../pages/message.vue'], resolve);
-const jisuan = resolve => require(['../pages/jisuan.vue'], resolve);
-const muban = resolve => require(['../pages/muban.vue'], resolve);
-const zhiyin = resolve => require(['../pages/zhiyin.vue'], resolve);
-const sifa = resolve => require(['../pages/sifa.vue'], resolve);
-const wenda = resolve => require(['../pages/wenda.vue'], resolve);
-const yuyue = resolve => require(['../pages/yuyue.vue'], resolve);
-const xinyong = resolve => require(['../pages/xinyong.vue'], resolve);
-const map = resolve => require(['../pages/map.vue'], resolve);
+import Parent from "../pages/app.vue";
+const panjue_list = ()=> import( "../pages/panjue-list.vue");
+const anjian_search = ()=> import( "../pages/anjian-search.vue");
+const tingshen = () => import( "../pages/tingshen.vue");
+const newsList = () => import( "../pages/newsList.vue");
+const baoguang = () => import( "../pages/baoguang.vue");
+const weituo = () => import( "../pages/weituo.vue");
+const jianxing = () => import( "../pages/jianxing.vue");
+const lian = () => import( "../pages/lian.vue");
+const me = () => import( "../pages/me.vue");
+const wenshu = () => import( "../pages/wenshu-search.vue");
+const contact = () => import( "../pages/contact.vue");
+const register = () => import( "../pages/register.vue");
+const login = () => import( "../pages/login.vue");
+const message = () => import( "../pages/message.vue");
+const jisuan = () => import( "../pages/jisuan.vue");
+const muban = () => import( "../pages/muban.vue");
+const zhiyin = () => import( "../pages/zhiyin.vue");
+const sifa = () => import( "../pages/sifa.vue");
+const wenda = () => import( "../pages/wenda.vue");
+const yuyue = () => import( "../pages/yuyue.vue");
+const xinyong = () => import( "../pages/xinyong.vue");
+const map = () => import( "../pages/map.vue");
 export default {
     mode: 'hash',
     base: __dirname,
